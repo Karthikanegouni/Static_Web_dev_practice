@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.logo {
+  width: 50px;
+  border-radius: 50px;
+}
+.brand {
+  font-weight: bold;
+  margin: 10px;
+  font-size: 25px;
+  font-family: "Bree Serif";
+}
+#custom-nav {
+  background-color: #93652cc1;
+}
+
+.home-cnt {
+  background: radial-gradient(#f1ddc4, #f8bc72);
+  background-size: cover;
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+.cs-nav {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Bree Serif";
+}
+
+.cs-nav:hover {
+  text-shadow: 6px 0px 10px black;
+  color: wheat !important;
+}
+
+.port-img {
+  mix-blend-mode: multiply;
+}
+
+.company-line {
+  font-family: "Bree serif";
+}
+
+.company-paragraph {
+  font-family: "Roboto";
+}
+
+.box-cnt {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.search-box {
+  padding: 10px 30px;
+  border-radius: 10px;
+  border-style: none;
+}
+.search-btn {
+  border-style: none;
+  background-color: #06577f;
+  color: white;
+  border-radius: 10px;
+}
+.search-btn:hover{
+  background-color: #0982bf;
+}
+
+
+.info-crd {
+  margin: 15px;
+  font-family: "bree serif";
+}
+
+.line {
+  width: 20px;
+  height: 4px;
+  background-color: #06577f;
+}
+
+.about-cnt {
+  background: radial-gradient(#f9f6f2, #f7dfc0);
+  padding-top: 110px;
+  font-family: "Roboto";
+}
+.about-img {
+  border-radius: 10px;
+}
+.section-heading {
+  font-family: "Bree Serif";
+  color: #06577f;
+  font-weight: bold;
+}
+
+.section-paragraph {
+  font-family: "Roboto";
+}
+
+.about-crd-heading {
+  font-weight: bold;
+  color: #06577f;
+  font-family: Bree Serif;
+}
+
+.crd {
+  border-radius: 15px;
+  transition: transform 0.5s;
+}
+.crd:hover {
+  transform: scale(1.05);
+}
+.abt-crd-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.services-cnt {
+  background-image: radial-gradient(#f9f6f2, #f7dfc0);
+  padding-top: 110px;
+  font-family: "Roboto";
+}
+
+.pricing-cnt {
+  background-image: radial-gradient(#f9f6f2, #f7dfc0);
+  padding-top: 110px;
+  font-family: "Roboto";
+}
+
+.strick {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.nrml-crd {
+  background: radial-gradient(#f3ebe1, #f4d59d);
+}
+
+.spcl-crd {
+  border-style: solid;
+  border-width: 0px;
+  border-top-width: 10px;
+  border-color: #06577f;
+  transition: transform 0.5s;
+  background-image: radial-gradient(#f4d59d, #ed9a2d);
+}
+
+.spcl-crd:hover {
+  transform: scale(1.03);
+}
+
+.enquire {
+  background: radial-gradient(#414345,#232526);
+  background-size: contain;
+  color: #f7dfc0;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px black;
+  padding-top:100px;
+  padding-bottom: 100px;
+}
+
+.custom-btn {
+  background-color: #06577f;
+  color: #ed9a2d;
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 4px;
+  transition: transform 0.4s;
+  box-shadow: 3px 3px 1px#ed9a2d;
+  font-family: "Bree Serif";
+  font-weight: bold;
+}
+.custom-btn:hover {
+  opacity: 90%;
+  background-color: #ed9a2d;
+  color: #06577f;
+  box-shadow: 5px 5px 1px #06577f;
+  transform: scale(1.1);
+}
+.footer {
+  background-color: #06577f;
+  color: white;
+}
+
+a {
+  color: white !important;
+}
+
+.bg-icons {
+  background-image: url("https://images.hw.net/Brightspot/ProSales/Interactives/2018/1018/logisticsproducts.gif");
+  background-size: contain;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 50px;
+}
+.socials {
+  font-size: 35px;
+  color: black;
+  transition: transform 0.2s;
+}
+.socials:hover {
+  transform: scale(1.2);
+}

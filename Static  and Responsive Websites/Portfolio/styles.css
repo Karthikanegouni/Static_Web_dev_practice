@@ -1,0 +1,10 @@
+.anim{
+    height: 100px;
+    width: 200px;
+}
+
+.div{
+ display: flexbox;
+ flex-direction: row;
+ justify-content: center;   
+}

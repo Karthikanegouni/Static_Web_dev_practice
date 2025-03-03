@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.bg-container {
+  background-image: url("https://i.pinimg.com/736x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  font-style: "Netflix Sans", "Helvetica Neue", "Segoe UI";
+}
+
+.shade {
+  background-color: #00000080;
+  background-size: cover;
+  height: 100vh;
+}
+
+.head-container {
+  background-color: #000000;
+  margin-top: 40px;
+}
+.heading {
+  color: red;
+  font-weight: bolder;
+  font-style: "Netflix Sans", "Helvetica Neue", "Segoe UI";
+  margin: 3px 30px;
+}
+
+.signin-btn {
+  color: white;
+  background-color: red;
+  margin: 10px;
+  margin-right: 50px;
+}
+
+.dropdown-btn {
+  border-style: solid;
+  border: 5px;
+  color: white;
+  background-color: #00000080;
+  border-color: white;
+  margin: 10px;
+}
+
+.content-card {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.head2 {
+  font-size: 40px;
+  font-style: "Netflix Sans", "Helvetica Neue", "Segoe UI";
+  font-weight: 800;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.email {
+  background-color: #00000080;
+  color: white;
+  width: 40%;
+  border-style: solid;
+  border-width: 1px;
+  padding: 6px 20px;
+  margin-bottom: 20px;
+}
+
+.get-started-btn {
+  color: white;
+  background-color: red;
+}

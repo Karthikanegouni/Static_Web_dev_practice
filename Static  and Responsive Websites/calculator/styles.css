@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.top-cnt {
+  background-color: black;
+  height: 40vh;
+}
+
+.top {
+  background-color: black;
+  margin-bottom: -8px;
+}
+
+.inp {
+  font-family: consolas;
+  font-weight: bolder;
+  text-align: right;
+  font-size: 30px;
+  border: 0px;
+  background-color: black;
+  color: #ffffff;
+  margin-left: 40%;
+  margin-right: 10%;
+}
+
+.btn-cnt {
+  background-color: black;
+  padding: 30px;
+  height: 60vh;
+}
+
+.heading {
+  text-align: center;
+  font-family: caveat;
+  font-size: 40px;
+  font-weight: 1000;
+  color: grey;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border-width: 0px;
+  margin: 5px;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: rgb(38, 36, 36);
+}
+
+.button:hover {
+  background-color: transparent;
+  border-style: solid;
+  border-color: aqua;
+}
+
+.btno {
+  background-color: orange;
+}
+
+.btnt {
+  background-color: gray;
+}

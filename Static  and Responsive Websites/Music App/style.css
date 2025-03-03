@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.bg-cnt {
+  background-image: url("https://new-assets.ccbp.in/frontend/static-website/moon-stars-bg.png");
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: Bree Serif;
+  text-align: center;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+.heading {
+  font-size: 25px;
+}
+
+.heading1 {
+  color: #ffe7bf;
+}
+
+.info {
+  font-size: 13px;
+}
+
+.image-card {
+  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/moon-bg.png");
+  background-size: cover;
+  height: 180px;
+  text-align: center;
+  margin: 3px;
+  margin-top: 30%;
+}
+
+.start-btn {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #8e97fd;
+  color: #ffffff;
+  padding: 3px 20px 3px 20px;
+  border-radius: 25px;
+  border-width: 0px;
+  font-size: 13px;
+}
+
+/* ***********************************************   */
+
+.top-image-card {
+  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/clouds-img.png");
+  background-size: cover;
+  height: 40vh;
+}
+
+.btm-cnt {
+  color: white;
+  background-color: #03174c;
+  font-family: Bree Serif;
+  padding: 20px;
+}
+
+.info2 {
+  color: #98a1bd;
+  font-size: 13px;
+}
+
+.head1 {
+  font-size: 15px;
+}
+
+.image {
+  height: 80px;
+}
+
+.music-card {
+  margin: 5px;
+}
+
+.back-btn {
+  background-color: #8e97fd;
+  color: #ffffff;
+  padding: 3px 30px 3px 30px;
+  border-radius: 25px;
+  border-width: 0px;
+  font-size: 13px;
+  font-family: Bree Serif;
+}
