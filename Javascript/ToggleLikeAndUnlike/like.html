@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/18d1c30374.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="m-1 shadow-lg">
+      <div class="title-cnt d-flex flex-row justify-content-start">
+        <div class="User-img">
+          <img
+            class="w-100 rounded-circle"
+            src="https://plus.unsplash.com/premium_photo-1661892088256-0a17130b3d0d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHVwcHl8ZW58MHx8MHx8fDA%3D"
+          />
+        </div>
+        <p class="text-light mt-2">furypup_32</p>
+      </div>
+      <div>
+        <div class="img-cnt">
+          <img
+            id="puppyImage"
+            src="https://c4.wallpaperflare.com/wallpaper/720/626/508/cute-dog-maltese-puppies-wallpaper-preview.jpg"
+            class="puppy-image"
+          />
+        </div>
+        <div class="d-flex flex-row justify-content-between icon-cnt">
+          <i
+            id="likeIcon"
+            class="fa-solid fa-thumbs-up icon"
+            onclick="onClickLikeButton()"
+            aria-hidden="false"
+          ></i>
+          <i
+            id="heartIcon"
+            class="fa-solid fa-heart icon"
+            onclick="onClickHeartButton()"
+            aria-hidden="false"
+          ></i>
+          <i
+            id="grinIcon"
+            class="fa-solid fa-face-grin-hearts icon"
+            onclick="onClickGrinButton()"
+            aria-hidden="false"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
