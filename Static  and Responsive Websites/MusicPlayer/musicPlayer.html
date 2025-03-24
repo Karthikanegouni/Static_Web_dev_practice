@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player with Thumbnail & Song Name</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            background-color: #121212;
+            color: white;
+        }
+        .player-container {
+            width: 300px;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.5);
+            margin: auto;
+        }
+        .thumbnail {
+            width: 100%;
+            border-radius: 10px;
+            height: 100%;
+            object-fit: cover;
+        }
+        .song-info {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .progress-container {
+            width: 100%;
+            background: #333;
+            height: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: #ff5733;
+            border-radius: 5px;
+        }
+        .time {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+
+        .select{
+            border-radius: 15px;
+            background-color: #ff5733;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Audio Player</h1>
+    <div class="player-container">
+        <img id="thumbnail" class="thumbnail" src="https://via.placeholder.com/300x200?text=No+Thumbnail" alt="Album Cover">
+        
+        <p class="song-info">
+            <strong id="songTitle">Song Name</strong> - <span id="artist">Artist</span>
+        </p>
+
+        <button id="playButton">Play</button>
+        
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p class="time">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+        </p>
+
+        <input type="file" class="select" id="audioFile" accept="audio/mp3">
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script>
+        const audio = document.getElementById("audio");
+        const playButton = document.getElementById("playButton");
+        const progressBar = document.getElementById("progressBar");
+        const progressContainer = document.getElementById("progressContainer");
+        const currentTimeDisplay = document.getElementById("currentTime");
+        const durationDisplay = document.getElementById("duration");
+        const thumbnail = document.getElementById("thumbnail");
+        const songTitle = document.getElementById("songTitle");
+        const artist = document.getElementById("artist");
+        const audioFile = document.getElementById("audioFile");
+
+        
+        playButton.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = "Pause";
+            } else {
+                audio.pause();
+                playButton.textContent = "Play";
+        
+            }
+        });
+
+        
+        audio.addEventListener("timeupdate", () => {
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+            currentTimeDisplay.textContent = formatTime(audio.currentTime);
+        });
+
+       
+        audio.addEventListener("loadedmetadata", () => {
+            durationDisplay.textContent = formatTime(audio.duration);
+        });
+
+       
+        progressContainer.addEventListener("click", (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            audio.currentTime = (clickX / width) * duration;
+        });
+
+     
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min}:${sec < 10 ? "0" : ""}${sec}`;
+        }
+
+        
+        audioFile.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const objectURL = URL.createObjectURL(file);
+                audio.src = objectURL;
+
+                jsmediatags.read(file, {
+                    onSuccess: (tag) => {
+                        if (tag.tags.picture) {
+                            let base64String = "";
+                            for (let i = 0; i < tag.tags.picture.data.length; i++) {
+                                base64String += String.fromCharCode(tag.tags.picture.data[i]);
+                            }
+                            const base64 = `data:${tag.tags.picture.format};base64,${btoa(base64String)}`;
+                            thumbnail.src = base64;
+                        } else {
+                            thumbnail.src = "https://via.placeholder.com/300x200?text=No+Thumbnail";
+                        }
+
+                    
+                        songTitle.textContent = tag.tags.title || file.name;
+                        artist.textContent = tag.tags.artist || "Unknown Artist";
+                    },
+                    onError: (error) => {
+                        console.log("Error loading MP3 metadata:", error);
+                        thumbnail.src = "https://via.placeholder.com/300x200?text=No+Thumbnail";
+                        songTitle.textContent = file.name;
+                        artist.textContent = "Unknown Artist";
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

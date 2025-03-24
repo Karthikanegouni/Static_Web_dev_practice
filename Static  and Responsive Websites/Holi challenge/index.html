@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holi Color Splash Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Holi Color Splash Game</h1>
+    <div class="play-area" id="playArea"></div>
+    <br />
+    <button class="color-btn" style="background: red" onclick="addColor('red')">
+      Red
+    </button>
+    <button
+      class="color-btn"
+      style="background: blue"
+      onclick="addColor('blue')"
+    >
+      Blue
+    </button>
+    <button
+      class="color-btn"
+      style="background: green"
+      onclick="addColor('green')"
+    >
+      Green
+    </button>
+    <button
+      class="color-btn"
+      style="background: yellow; color: black"
+      onclick="addColor('yellow')"
+    >
+      Yellow
+    </button>
+    <button
+      class="color-btn"
+      style="background: orange"
+      onclick="addColor('orange')"
+    >
+      Orange
+    </button>
+    <button
+      class="color-btn"
+      style="background: purple"
+      onclick="addColor('purple')"
+    >
+      Purple
+    </button>
+    <br />
+    <button
+      class="color-btn"
+      style="background: black"
+      onclick="clearPlayArea()"
+    >
+      Clear Area
+    </button>
+
+    <script src="logic.js"></script>
+  </body>
+</html>
